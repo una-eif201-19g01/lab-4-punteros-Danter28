@@ -18,6 +18,8 @@
 #define EMPLEADOPUNTEROS_EMPLEADO_H
 #include <string>
 #include <iostream>
+#include<stdlib.h>
+#include<time.h>
 using std::string;
 class Empleado {
 protected:
@@ -29,8 +31,8 @@ protected:
 private:
 	
 	
-	float aumentoSalario();
-	void revisionAleatoria();
+	float aumentoSalario(Empleado*);
+	void revisionAleatoria(Empleado*);
 	
 public:
 	string obtenerReporteEmpleado();
