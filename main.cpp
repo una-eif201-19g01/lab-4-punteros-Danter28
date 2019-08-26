@@ -13,16 +13,17 @@ int main() {
 	int numeroE;
 	
     Empleado empleados[CANTIDAD];
-	for (contador=0; contador <= CANTIDAD; contador++) {
-		cout << "digite el nombe del empleado [" << contador << "]\n";
+
+	for (contador=0; contador < CANTIDAD; contador++) {
+		cout << "digite el nombe del empleado [" << contador+1 << "]\n";
 		cin >> nombres;
 		empleados[contador].setNombre(nombres);
 		//
-		cout << "digite los annios de experiencia del empleado [" << contador << "]\n";
+		cout << "digite los annios de experiencia del empleado [" << contador+1 << "]\n";
 		cin >> annios;
 		empleados[contador].setAnnios(annios);
 		//
-		cout << "digite el salario del empleado [" << contador << "]\n";
+		cout << "digite el salario del empleado [" << contador+1 << "]\n";
 		cin >> salarios;
 		empleados[contador].setSalario(salarios);
 		//
@@ -38,7 +39,7 @@ int main() {
 	 empleado[0].setSalarioBase(1200000);
 	*/
 	
-	for(contador=0;contador<=CANTIDAD;contador++)
+	for(contador=0;contador<CANTIDAD;contador++)
 
     return 0;
 }
