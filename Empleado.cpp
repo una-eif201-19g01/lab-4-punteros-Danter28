@@ -14,20 +14,39 @@
 #include"Empleado.h"
 Empleado::Empleado(){}
 Empleado::Empleado(){}
-float Empleado::aumentoSalario(Empleado* Empleado) {
-	float aumento = 0;
-	if (Empleado->anniosExp>= 3) { aumento = (Empleado->salarioBase * 0.05) * Empleado->anniosExp; }
-	else{ aumento = (Empleado->salarioBase * 0.02) * Empleado->anniosExp; }
+float Empleado::aumentoSalario(Empleado* Empleado) {	
+	float aumento = (Empleado->anniosExp >= 3) ? (Empleado->salarioBase * 0.05) * Empleado->anniosExp 
+					: (Empleado->salarioBase * 0.02) * Empleado->anniosExp;
 	Empleado->salarioBase += aumento;
 	return aumento;
 }
 void Empleado::revisionAleatoria(Empleado* Empleado) {
-	Empleado->revision = ((0 + rand() % (2 - 0)) == 1) ? true : false;
+	Empleado->revision = ((rand() % 2) == 1) ? true : false;
 
 }
-string Empleado::obtenerReporteEmpleado() {
+string Empleado::obtenerReporteEmpleado(Empleado* Empleado) {
+	string reporte =
+		"\tNombre[" + Empleado->getNombre() + "]" +
+		"\n\tAños de experiencia[" + std::to_string(Empleado->getAnnios) + "]" +
+		"\n\tSalario Inicial[" + std::to_string(Empleado->getSalario()) + "]" +
+		"\n\tSalario Acumulado[";
+	revisionAleatoria(Empleado);
+	if (Empleado->revision) { Empleado->aumentoSalario(Empleado); }
+	reporte += std::to_string(Empleado->getSalario()) + "]" + "\n\tNecesita revision[";
+	reporte+=(Empleado->revision) ? "Si]\n" : "No]\n";
 
 }
 
-
+Empleado::Empleado():nombre(" "), numeroEmpleado(0)
+, anniosExp(0), salarioBase(0) {}
+Empleado::Empleado(string nombre, int numero, int annios, double salario) :nombre(nombre),numeroEmpleado(numero)
+,anniosExp(annios),salarioBase(salario){}
+void Empleado::setNombre(string nombre) { this->nombre = nombre; }
+string Empleado::getNombre() { return nombre; }
+void Empleado::setAnnios(int annios) { anniosExp = annios; }
+int Empleado::getAnnios() { return anniosExp; }
+void Empleado::setNumeroEmpleado(int numero) { numeroEmpleado = numero; }
+int Empleado::getNumeroEmpleado() { return numeroEmpleado; }
+void Empleado::setSalario(double salario) { salarioBase = salario; }
+double Empleado::getSalario() { return salarioBase; }
 

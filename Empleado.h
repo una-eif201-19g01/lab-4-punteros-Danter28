@@ -27,7 +27,7 @@ protected:
 	int numeroEmpleado;
 	int anniosExp;
 	double  salarioBase;
-	bool revision;
+	bool revision=0;
 private:
 	
 	
@@ -35,10 +35,17 @@ private:
 	void revisionAleatoria(Empleado*);
 	
 public:
-	string obtenerReporteEmpleado();
+	string obtenerReporteEmpleado(Empleado*);
 	Empleado();
-	Empleado();
-
+	Empleado(string,int,int,double);
+	void setNombre(string);
+	string getNombre();
+	void setAnnios(int);
+	int getAnnios(); 
+	void setNumeroEmpleado(int );
+	int getNumeroEmpleado();
+	void setSalario(double);
+	double getSalario();
 
 
 
