@@ -27,24 +27,24 @@ protected:
 	int numeroEmpleado;
 	int anniosExp;
 	float salarioBase;
-	bool revision=0;
+	bool revision;
 private:
 	
 	
 	float aumentoSalario(Empleado*);
-	void revisionAleatoria(Empleado*);
+	void revisionAleatoria(Empleado*,int&);
 	
 public:
-	string obtenerReporteEmpleado(Empleado&);
+	string obtenerReporteEmpleado(Empleado&,int& );
 	Empleado();
 	Empleado(string,int,int,float);
-	void setNombre(string);
+	void setNombre(string&);
 	string getNombre();
-	void setAnnios(int);
+	void setAnnios(int&);
 	int getAnnios(); 
-	void setNumeroEmpleado(int );
+	void setNumeroEmpleado(int&);
 	int getNumeroEmpleado();
-	void setSalario(float);
+	void setSalario(float&);
 	float getSalario();
 	//void setFlagTrue();
 

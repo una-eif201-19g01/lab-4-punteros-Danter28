@@ -2,15 +2,15 @@
 #include "Empleado.h"
 using std::cout;
 using std::cin;
-const int CANTIDAD = 3;
+const int CANTIDAD = 1;
 
 int main() {
-	int srand(time(NULL));
+	srand(time(NULL));
 	string nombres;
 	int annios;
 	float salarios;
 	int contador;
-	int numeroE;
+	int numeroE = 1 + rand() % (101 - 1);
 	
     Empleado empleados[CANTIDAD];
 
@@ -28,14 +28,16 @@ int main() {
 		cin >> salarios;
 		empleados[contador].setSalario(salarios);
 		//
-		numeroE=1 + rand() % (101 - 1);
+		numeroE= 1+ rand() % (101 - 1);
 		empleados[contador].setNumeroEmpleado(numeroE);
 		cout << "su numero de empleado es: [" << numeroE << "]\n\n";
 	}
-
+	int binFlag = (rand() % 2);
 	for (contador = 0; contador < CANTIDAD; contador++) {
+		//binFlag = (rand() % 2);
+		binFlag = 1;
 		cout << "Empleado #:[" << empleados[contador].getNumeroEmpleado() << "]\n"
-			<< empleados[contador].obtenerReporteEmpleado(empleados[contador]);
+			<< empleados[contador].obtenerReporteEmpleado(empleados[contador],binFlag);
 	}
 	
 	/* Empleado empleado[CANTIDAD];

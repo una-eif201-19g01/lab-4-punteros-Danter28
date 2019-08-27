@@ -22,7 +22,7 @@ msvc_deps_prefix = Nota: inclusión del archivo:
 
 rule CXX_COMPILER__EmpleadoPuntero
   deps = msvc
-  command = "D:\programas\programas\VSEnterprise 2019\IDE\VC\Tools\MSVC\14.22.27905\bin\HostX64\x64\cl.exe"  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = D:\Programas\Programas\VSEnterprise2019\IDE\VC\Tools\MSVC\14.22.27905\bin\HostX64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -30,7 +30,7 @@ rule CXX_COMPILER__EmpleadoPuntero
 # Rule for linking CXX executable.
 
 rule CXX_EXECUTABLE_LINKER__EmpleadoPuntero
-  command = cmd.exe /C "$PRE_LINK && "D:\programas\programas\VSEnterprise 2019\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=$OBJECT_DIR --rc="D:\Windows Kits\10\bin\10.0.18362.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.18362.0\x64\mt.exe" --manifests $MANIFESTS -- "D:\programas\programas\VSEnterprise 2019\IDE\VC\Tools\MSVC\14.22.27905\bin\Hostx64\x64\link.exe" /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /version:0.0  $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Programas\Programas\VSEnterprise2019\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E vs_link_exe --intdir=$OBJECT_DIR --rc="D:\Windows Kits\10\bin\10.0.18362.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.18362.0\x64\mt.exe" --manifests $MANIFESTS -- D:\Programas\Programas\VSEnterprise2019\IDE\VC\Tools\MSVC\14.22.27905\bin\Hostx64\x64\link.exe /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /version:0.0  $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 
@@ -47,7 +47,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "D:\programas\programas\VSEnterprise 2019\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:\archivos\documentos\UNA\2019\progra1\Laboratorios\una-eif201-19g01\lab-4-punteros-Danter28 -BD:\archivos\documentos\UNA\2019\progra1\Laboratorios\una-eif201-19g01\lab-4-punteros-Danter28\out\build\x64-Debug
+  command = D:\Programas\Programas\VSEnterprise2019\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SC:\Users\dante\source\repos\una-eif201-19g01\lab-4-punteros-Danter28 -BC:\Users\dante\source\repos\una-eif201-19g01\lab-4-punteros-Danter28\out\build\x64-Debug
   description = Re-running CMake...
   generator = 1
 
@@ -56,7 +56,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = "D:\programas\programas\VSEnterprise 2019\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe" -t clean
+  command = D:\PROGRAMAS\PROGRAMAS\VSENTERPRISE2019\IDE\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe -t clean
   description = Cleaning all built files...
 
 
@@ -64,6 +64,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = "D:\programas\programas\VSEnterprise 2019\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe" -t targets
+  command = D:\PROGRAMAS\PROGRAMAS\VSENTERPRISE2019\IDE\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe -t targets
   description = All primary targets available:
 
