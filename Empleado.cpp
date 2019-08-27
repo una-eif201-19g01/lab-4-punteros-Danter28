@@ -29,7 +29,7 @@ void Empleado::revisionAleatoria(Empleado* Empleado) {
 string Empleado::obtenerReporteEmpleado(Empleado& Empleado) {
 	string reporte =
 		"\tNombre[" + Empleado.getNombre() + "]" +
-		"\n\tAños de experiencia[" + std::to_string(Empleado.getAnnios()) + "]" +
+		"\n\tAnnios de experiencia[" + std::to_string(Empleado.getAnnios()) + "]" +
 		"\n\tSalario Inicial[" + std::to_string(Empleado.getSalario()) + "]" +
 		"\n\tSalario Acumulado[";
 	revisionAleatoria(&Empleado);
@@ -49,4 +49,5 @@ void Empleado::setNumeroEmpleado(int numero) { numeroEmpleado = numero; }
 int Empleado::getNumeroEmpleado() { return numeroEmpleado; }
 void Empleado::setSalario(float salario) { salarioBase = salario; }
 float Empleado::getSalario() { return salarioBase; }
+void Empleado::setFlagTrue() { revision = true; }
 

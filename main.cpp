@@ -5,7 +5,7 @@ using std::cin;
 const int CANTIDAD = 3;
 
 int main() {
-	srand(time(NULL));
+	int srand(time(NULL));
 	string nombres;
 	int annios;
 	float salarios;
@@ -18,6 +18,7 @@ int main() {
 		cout << "digite el nombe del empleado [" << contador+1 << "]\n";
 		cin >> nombres;
 		empleados[contador].setNombre(nombres);
+		empleados[contador].setFlagTrue();
 		//
 		cout << "digite los annios de experiencia del empleado [" << contador+1 << "]\n";
 		cin >> annios;
@@ -32,17 +33,22 @@ int main() {
 		cout << "su numero de empleado es: [" << numeroE << "]\n\n";
 	}
 
-	/*
-	 Empleado empleado[3];
-	 empleado[0].setNombre("Mike");
-	 empleado[0].setAnoExperiencia(2);
-	 empleado[0].setSalarioBase(1200000);
-	*/
-	
 	for (contador = 0; contador < CANTIDAD; contador++) {
 		cout << "Empleado #:[" << empleados[contador].getNumeroEmpleado() << "]\n"
-			<< empleados[contador].obtenerReporteEmpleado();
+			<< empleados[contador].obtenerReporteEmpleado(empleados[contador]);
 	}
+	
+	/* Empleado empleado[CANTIDAD];
+	 empleado[0].setNombre("Mike");
+	 empleado[0].setAnnios(2);
+	 empleado[0].setSalario(1200000);
+
+
+	 cout << "Empleado #:[" << empleados[0].getNumeroEmpleado() << "]\n"
+		 << empleados[0].obtenerReporteEmpleado(empleados[0]);
+	
+	*/
+	
 
 	cin.get();
     return 0;
