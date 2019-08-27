@@ -18,7 +18,7 @@ int main() {
 		cout << "digite el nombe del empleado [" << contador+1 << "]\n";
 		cin >> nombres;
 		empleados[contador].setNombre(nombres);
-		empleados[contador].setFlagTrue();
+		//empleados[contador].setFlagTrue();
 		//
 		cout << "digite los annios de experiencia del empleado [" << contador+1 << "]\n";
 		cin >> annios;

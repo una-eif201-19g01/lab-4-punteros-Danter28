@@ -49,5 +49,5 @@ void Empleado::setNumeroEmpleado(int numero) { numeroEmpleado = numero; }
 int Empleado::getNumeroEmpleado() { return numeroEmpleado; }
 void Empleado::setSalario(float salario) { salarioBase = salario; }
 float Empleado::getSalario() { return salarioBase; }
-void Empleado::setFlagTrue() { revision = true; }
+//void Empleado::setFlagTrue() { revision = true; }
 
