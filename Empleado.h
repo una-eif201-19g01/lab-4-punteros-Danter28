@@ -46,7 +46,6 @@ public:
 	int getNumeroEmpleado();
 	void setSalario(float&);
 	float getSalario();
-	//void setFlagTrue();
 
 
 
