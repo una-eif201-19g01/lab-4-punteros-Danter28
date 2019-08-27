@@ -8,7 +8,7 @@ int main() {
 	srand(time(NULL));
 	string nombres;
 	int annios;
-	double salarios;
+	float salarios;
 	int contador;
 	int numeroE;
 	
@@ -39,7 +39,11 @@ int main() {
 	 empleado[0].setSalarioBase(1200000);
 	*/
 	
-	for(contador=0;contador<CANTIDAD;contador++)
+	for (contador = 0; contador < CANTIDAD; contador++) {
+		cout << "Empleado #:[" << empleados[contador].getNumeroEmpleado() << "]\n"
+			<< empleados[contador].obtenerReporteEmpleado();
+	}
 
+	cin.get();
     return 0;
 }
