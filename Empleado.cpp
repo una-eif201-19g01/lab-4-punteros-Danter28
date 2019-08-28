@@ -14,7 +14,7 @@
 #include"Empleado.h"
 
 Empleado::Empleado():nombre(""),numeroEmpleado(0),anniosExp(0),salarioBase(0),revision(0){}
-Empleado::Empleado(string nombre, int numeroEmp, int annios, float salario):nombre(nombre),numeroEmpleado(numeroEmp)
+Empleado::Empleado(string nombre, int annios, float salario):nombre(nombre),numeroEmpleado(numeroEmp)
 ,anniosExp(annios),salarioBase(salario),revision(0){}
 
 
@@ -51,4 +51,6 @@ void Empleado::setNumeroEmpleado(int& numero) { numeroEmpleado = numero; }
 int Empleado::getNumeroEmpleado() { return numeroEmpleado; }
 void Empleado::setSalario(float& salario) { salarioBase = salario; }
 float Empleado::getSalario() { return salarioBase; }
+void Empleado::setRevision(int& valor) { revision = valor; }
+bool Empleado::getRevision() { return revision; }
 

@@ -37,7 +37,7 @@ private:
 public:
 	string obtenerReporteEmpleado(Empleado&,int& );
 	Empleado();
-	Empleado(string,int,int,float);
+	Empleado(string,int,float);
 	void setNombre(string&);
 	string getNombre();
 	void setAnnios(int&);
@@ -46,6 +46,9 @@ public:
 	int getNumeroEmpleado();
 	void setSalario(float&);
 	float getSalario();
+	void setRevision(int&);
+	bool getRevision();
+
 
 
 
