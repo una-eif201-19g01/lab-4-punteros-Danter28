@@ -14,8 +14,7 @@
 #include"Empleado.h"
 
 Empleado::Empleado():nombre(""),numeroEmpleado(0),anniosExp(0),salarioBase(0),revision(0){}
-Empleado::Empleado(string nombre, int annios, float salario):nombre(nombre),numeroEmpleado(numeroEmp)
-,anniosExp(annios),salarioBase(salario),revision(0){}
+Empleado::Empleado(string nombre, int annios, float salario):nombre(nombre),anniosExp(annios),salarioBase(salario),revision(0){}
 
 
 float Empleado::aumentoSalario(Empleado* Empleado) {	
